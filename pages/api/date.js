@@ -7,5 +7,5 @@ export default function handler(req, res) {
   console.log(
     `This is a console.log from handler in api/date.js. Formatted date is ${formattedDate}.`
   );
-  res.status(200).json({ formattedDate: formattedDate });
+  res.status(200).json({ apiFormattedDate: formattedDate });
 }
