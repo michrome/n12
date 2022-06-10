@@ -9,7 +9,8 @@ export default function SSR({ formattedDate, env }) {
       </Head>
       <h1>ssr</h1>
       <p>This page should be server side rendered (SSR).</p>
-      <p>Formatted date: {formattedDate}</p>
+      <p>Formatted date: {formattedDate}.</p>
+      <p>There should be an in CloudWatch logs for this date.</p>
       <ul>
         <li>
           <a href="/">Statically Generated page</a>
@@ -25,5 +26,8 @@ export async function getServerSideProps() {
     dateStyle: "full",
     timeStyle: "long",
   }).format(date);
+  console.log(
+    `I should show up in the logs. Formatted date is ${formattedDate}.`
+  );
   return { props: { formattedDate } };
 }
