@@ -27,7 +27,7 @@ export async function getServerSideProps() {
     timeStyle: "long",
   }).format(date);
   console.log(
-    `I should show up in the logs. Formatted date is ${formattedDate}.`
+    `This is a console.log from getServerSideProps in ssr.js. Formatted date is ${formattedDate}.`
   );
   return { props: { formattedDate } };
 }
