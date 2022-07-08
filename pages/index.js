@@ -13,6 +13,12 @@ export default function Home() {
         <li>
           <a href="/ssr">Server Side Rendered page</a>
         </li>
+        <li>
+          <a href="/api/date">API Route</a>
+        </li>
+        <li>
+          <a href="/api/date-edge">Edge API Route</a>
+        </li>
       </ul>
     </>
   );

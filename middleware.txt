@@ -1,4 +1,6 @@
-export function middleware() {
+import { NextRequest } from "next/server";
+
+export function middleware(NextRequest) {
   const date = Date.now();
   const formattedDate = new Intl.DateTimeFormat("en-GB", {
     dateStyle: "full",
@@ -7,7 +9,9 @@ export function middleware() {
   console.log(
     `This is a console.log from middleware in middleware/_middleware.js. Formatted date is ${formattedDate}.`
   );
-  return new Response(
-    JSON.stringify({ middlewareFormattedDate: formattedDate })
-  );
+  if (NextRequest.nextUrl.pathname.startsWith("/middleware")) {
+    return new Response(
+      JSON.stringify({ middlewareFormattedDate: formattedDate })
+    );
+  }
 }
