@@ -10,7 +10,7 @@ export default function SSR({ ssrDate, env }) {
       </Head>
       <h1>ssr</h1>
       <p>This page was server side rendered (SSR) at {ssrDate}.</p>
-      <p>There should be log entry showing SSR ran.</p>
+      <p>There should be a log entry showing SSR ran.</p>
     </>
   );
 }
