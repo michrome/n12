@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { britishDate } from "../lib/helpers";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>index</h1>
-      <p>This page should be statically generated (SSG).</p>
+      <p>This page was statically generated (SSG) on {britishDate()}.</p>
       <ul>
         <li>
           <a href="/ssr">Server Side Rendered page</a>

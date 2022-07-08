@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { britishDate } from "../lib/helpers";
 
-export default function SSR({ formattedDate, env }) {
+export default function SSR({ ssrDate, env }) {
   return (
     <>
       <Head>
@@ -8,26 +9,16 @@ export default function SSR({ formattedDate, env }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>ssr</h1>
-      <p>This page should be server side rendered (SSR).</p>
-      <p>Formatted date: {formattedDate}.</p>
-      <p>There should be an in CloudWatch logs for this date.</p>
-      <ul>
-        <li>
-          <a href="/">Statically Generated page</a>
-        </li>
-      </ul>
+      <p>This page was server side rendered (SSR) at {ssrDate}.</p>
+      <p>There should be log entry showing SSR ran.</p>
     </>
   );
 }
 
 export async function getServerSideProps() {
-  const date = Date.now();
-  const formattedDate = new Intl.DateTimeFormat("en-GB", {
-    dateStyle: "full",
-    timeStyle: "long",
-  }).format(date);
+  const ssrDate = britishDate();
   console.log(
-    `This is a console.log from getServerSideProps in ssr.js. Formatted date is ${formattedDate}.`
+    `This is a console.log from getServerSideProps in ssr.js. British date is ${ssrDate}.`
   );
-  return { props: { formattedDate } };
+  return { props: { ssrDate } };
 }
