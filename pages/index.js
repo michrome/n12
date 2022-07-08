@@ -17,9 +17,9 @@ export default function Home() {
         <li>
           <a href="/api/date">API Route</a>
         </li>
-        <li>
+        {/* <li>
           <a href="/api/date-edge">Edge API Route</a>
-        </li>
+        </li> */}
         <li>
           <a href="/image">next/image</a>
         </li>
