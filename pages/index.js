@@ -20,6 +20,9 @@ export default function Home() {
         <li>
           <a href="/api/date-edge">Edge API Route</a>
         </li>
+        <li>
+          <a href="/image">next/image</a>
+        </li>
       </ul>
     </>
   );

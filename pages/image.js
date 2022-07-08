@@ -20,11 +20,6 @@ export default function AVIF() {
       <p>
         <Image alt="" src={logo} />
       </p>
-      <ul>
-        <li>
-          <a href="/ssr">Server Side Rendered page</a>
-        </li>
-      </ul>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget
         neque ut turpis fermentum lobortis eu a lectus. Nulla volutpat ornare
@@ -78,10 +73,10 @@ export default function AVIF() {
         tincidunt aliquet. Sed et dictum neque.
       </p>
       <p>
-        <p>
-            This image should only load when it enters the viewport and it should
-            have been resized to half of its original dimensions. 
-        </p>
+        This image should only load when it enters the viewport and it should
+        have been resized to half of its original dimensions.
+      </p>
+      <p>
         <Image alt="" src={logo} height={55} width={400} />
       </p>
     </>
