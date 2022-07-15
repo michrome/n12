@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { britishDate } from "../lib/helpers";
 
-export default function SSR({ ssrDate, env }) {
+export default function SSR({ ssrDate }) {
   return (
     <>
       <Head>
