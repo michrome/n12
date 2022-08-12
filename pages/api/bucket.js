@@ -6,6 +6,6 @@ export default function handler(req, res) {
     Key: "i-am-bucket",
   };
   s3.getSignedUrl("putObject", params, function (err, url) {
-    res.status(200).json({ url: url });
+    return res.status(200).json({ url: url });
   });
 }
