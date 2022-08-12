@@ -5,7 +5,7 @@ export default function handler(req, res) {
     Bucket: "let-me-see-if-i-can-upload",
     Key: "i-am-bucket",
   };
-  const url = s3.getSignedUrl("putObject", params);
-
-  res.status(200).json({ url: url });
+  s3.getSignedUrl("putObject", params, function (err, url) {
+    res.status(200).json({ url: url });
+  });
 }
