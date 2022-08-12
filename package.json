@@ -6,7 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "aws-sdk": "^2.1194.0",
     "next": "latest",
+    "npm": "^8.14.0",
     "react": "latest",
     "react-dom": "latest"
   }
