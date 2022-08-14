@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   //   accessKeyId: process.env.ACCESS_KEY_ID,
   //   secretAccessKey: process.env.SECRET_ACCESS_KEY,
   // });
-  const s3 = new AWS.S3();
+  const s3 = new AWS.S3({ region: "us-west-2" });
   const params = {
     Bucket: "let-me-see-if-i-can-upload",
     Key: "i-am-bucket",
