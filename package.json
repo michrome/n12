@@ -10,5 +10,8 @@
     "next": "^12.2.5",
     "react": "latest",
     "react-dom": "latest"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
   }
 }
