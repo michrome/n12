@@ -13,10 +13,7 @@ export function middleware(request) {
   // const requestHeaders = new Headers(request.headers);
   // console.log(requestHeaders);
   // requestHeaders.set("x-hello-from-middleware1", "hello");
-  console.log(JSON.stringify(request.headers));
-  return new NextResponse(
-    JSON.stringify({ success: false, message: "authentication failed" }),
-    { status: 401, headers: { "content-type": "application/json" } }
-  );
+  console.log(JSON.stringify(request.headers, null, 2));
+
   // }
 }
